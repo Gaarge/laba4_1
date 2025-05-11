@@ -27,3 +27,12 @@ C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\Esprima.dll
 C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\ExCSS.dll
 C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\Jint.dll
 C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\AngleSharp.Css.dll
+C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\Microsoft.Web.WebView2.Core.dll
+C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\Microsoft.Web.WebView2.Core.xml
+C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\Microsoft.Web.WebView2.Wpf.xml

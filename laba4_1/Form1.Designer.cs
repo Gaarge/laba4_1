@@ -40,7 +40,11 @@
             btnPerf = new Button();
             dgvResults = new DataGridView();
             progressBar = new ProgressBar();
+            webView = new Microsoft.Web.WebView2.WinForms.WebView2();
+            lblFCP = new Label();
+            lblTTI = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvResults).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)webView).BeginInit();
             SuspendLayout();
             // 
             // rtbHtml
@@ -148,11 +152,43 @@
             progressBar.Size = new Size(156, 29);
             progressBar.TabIndex = 11;
             // 
+            // webView
+            // 
+            webView.AllowExternalDrop = true;
+            webView.CreationProperties = null;
+            webView.DefaultBackgroundColor = Color.White;
+            webView.Location = new Point(649, 355);
+            webView.Name = "webView";
+            webView.Size = new Size(264, 249);
+            webView.TabIndex = 12;
+            webView.ZoomFactor = 1D;
+            // 
+            // lblFCP
+            // 
+            lblFCP.AutoSize = true;
+            lblFCP.Location = new Point(658, 635);
+            lblFCP.Name = "lblFCP";
+            lblFCP.Size = new Size(28, 15);
+            lblFCP.TabIndex = 13;
+            lblFCP.Text = "FCP";
+            // 
+            // lblTTI
+            // 
+            lblTTI.AutoSize = true;
+            lblTTI.Location = new Point(774, 635);
+            lblTTI.Name = "lblTTI";
+            lblTTI.Size = new Size(22, 15);
+            lblTTI.TabIndex = 14;
+            lblTTI.Text = "TTI";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(973, 749);
+            Controls.Add(lblTTI);
+            Controls.Add(lblFCP);
+            Controls.Add(webView);
             Controls.Add(progressBar);
             Controls.Add(dgvResults);
             Controls.Add(btnPerf);
@@ -168,6 +204,7 @@
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dgvResults).EndInit();
+            ((System.ComponentModel.ISupportInitialize)webView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -186,5 +223,8 @@
         private Button btnPerf;
         private DataGridView dgvResults;
         private ProgressBar progressBar;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView;
+        private Label lblFCP;
+        private Label lblTTI;
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "R5OPvQmaC6Y=",
+  "dgSpecHash": "KhruIg7t5ec=",
   "success": true,
   "projectFilePath": "C:\\Users\\vladr\\source\\repos\\laba4_1\\laba4_1\\laba4_1.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,8 @@
     "C:\\Users\\vladr\\.nuget\\packages\\esprima\\3.0.5\\esprima.3.0.5.nupkg.sha512",
     "C:\\Users\\vladr\\.nuget\\packages\\excss-core\\4.0.5\\excss-core.4.0.5.nupkg.sha512",
     "C:\\Users\\vladr\\.nuget\\packages\\htmlagilitypack\\1.12.1\\htmlagilitypack.1.12.1.nupkg.sha512",
-    "C:\\Users\\vladr\\.nuget\\packages\\jint\\4.2.2\\jint.4.2.2.nupkg.sha512"
+    "C:\\Users\\vladr\\.nuget\\packages\\jint\\4.2.2\\jint.4.2.2.nupkg.sha512",
+    "C:\\Users\\vladr\\.nuget\\packages\\microsoft.web.webview2\\1.0.3240.44\\microsoft.web.webview2.1.0.3240.44.nupkg.sha512"
   ],
   "logs": [
     {

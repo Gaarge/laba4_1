@@ -3,8 +3,9 @@ using HtmlAgilityPack;
 using Jint;
 using Esprima;
 using Jint.Runtime;
-using Jint;
-using Esprima;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 
 namespace ClassLib
@@ -84,7 +85,7 @@ namespace ClassLib
             int firstClose = css.IndexOf('}');
 
             // Если хотя бы один из индексов не валиден — сообщаем и НЕ лезем в Substring
-            if (firstOpen < 0 && firstClose < 0 && firstClose < firstOpen)
+            if (firstOpen < 0 || firstClose < 0 || firstClose < firstOpen)
     {
                 result.Errors.Add(new ValidationError
                 {
@@ -187,12 +188,149 @@ namespace ClassLib
     }
     public class CodeLinter
     {
-        public LintResult LintHtml(string html, LintOptions opts) => throw new NotImplementedException();
-        public LintResult LintCss(string css, LintOptions opts) => throw new NotImplementedException();
-        public LintResult LintJs(string js, LintOptions opts) => throw new NotImplementedException();
+        public LintResult LintHtml(string html, LintOptions opts)
+        {
+            var result = new LintResult();
+            var doc = new HtmlDocument();
+            doc.LoadHtml(html);
+
+            // 1) Теги только в нижнем регистре
+            foreach (var node in doc.DocumentNode.Descendants()
+                       .Where(n => n.NodeType == HtmlNodeType.Element))
+            {
+                var tag = node.OriginalName;
+                if (tag != tag.ToLowerInvariant())
+                    result.Error.Add(new LintError
+                    {
+                        RuleId = "lowercase-tags",
+                        Message = $"Тег <{node.Name}> должен быть в нижнем регистре",
+                        Line = node.Line,
+                        Column = node.LinePosition
+                    });
+            }
+
+            // 2) Уникальность id
+            var seenIds = new HashSet<string>();
+            foreach (var node in doc.DocumentNode.Descendants()
+                       .Where(n => n.Attributes["id"] != null))
+            {
+                var id = node.Attributes["id"].Value;
+                if (!seenIds.Add(id))
+                    result.Error.Add(new LintError
+                    {
+                        RuleId = "duplicate-id",
+                        Message = $"Дублированный id=\"{id}\"",
+                        Line = node.Line,
+                        Column = node.LinePosition
+                    });
+            }
+
+            // 3) <img> должен иметь alt
+            foreach (var img in doc.DocumentNode.Descendants("img"))
+            {
+                if (img.Attributes["alt"] == null)
+                    result.Error.Add(new LintError
+                    {
+                        RuleId = "img-require-alt",
+                        Message = "<img> без атрибута alt",
+                        Line = img.Line,
+                        Column = img.LinePosition
+                    });
+            }
+
+            // 4) В <head> должен быть <title>
+            if ((doc.DocumentNode.SelectSingleNode("//head/title") == null) && (doc.DocumentNode.SelectSingleNode("//head") != null))
+            {
+                var head = doc.DocumentNode.SelectSingleNode("//head");
+                result.Error.Add(new LintError
+                {
+                    RuleId = "missing-title",
+                    Message = "Отсутствует <title> в <head>",
+                    Line = head?.Line ?? 0,
+                    Column = head?.LinePosition ?? 0
+                });
+            }
+
+            result.HasIssues = result.Error.Any();
+            return result;
+        }
+
+        public LintResult LintCss(string css, LintOptions opts)
+        {
+            var result = new LintResult();
+            var lines = css.Split(new[] { '\n' }, StringSplitOptions.None);
+            for (int i = 0; i < lines.Length; i++)
+            {
+                var line = lines[i].Trim();
+                // Числовое значение без единицы (кроме 0)
+                if (line.Contains(":"))
+                {
+                    var parts = line.Split(':');
+                    if (parts.Length > 1)
+                    {
+                        var value = parts[1].Trim().TrimEnd(';');
+                        if (value != "0" && decimal.TryParse(value, out _))
+                        {
+                            result.Error.Add(new LintError
+                            {
+                                RuleId = "missing-unit",
+                                Message = "Числовое значение без единицы измерения",
+                                Line = i + 1,
+                                Column = line.IndexOf(value) + 1
+                            });
+                        }
+                    }
+                }
+            }
+
+            result.HasIssues = result.Error.Any();
+            return result;
+        }
+
+        public LintResult LintJs(string js, LintOptions opts)
+        {
+            var result = new LintResult();
+            var lines = js.Split(new[] { '\n' }, StringSplitOptions.None);
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                var line = lines[i];
+                var trimmed = line.Trim();
+
+                // 1) console.log
+                if (trimmed.Contains("console.log"))
+                    result.Error.Add(new LintError
+                    {
+                        RuleId = "no-console",
+                        Message = "Использование console.log",
+                        Line = i + 1,
+                        Column = trimmed.IndexOf("console.log") + 1
+                    });
+
+                // 2) Отсутствует ';' в конце строки кода
+                if (!string.IsNullOrEmpty(trimmed) &&
+                    !trimmed.EndsWith(";") &&
+                    !trimmed.EndsWith("{") &&
+                    !trimmed.EndsWith("}") &&
+                    !trimmed.StartsWith("//") &&
+                    !trimmed.StartsWith("/*"))
+                {
+                    result.Error.Add(new LintError
+                    {
+                        RuleId = "missing-semicolon-js",
+                        Message = "Отсутствует ';' в конце JS-строки",
+                        Line = i + 1,
+                        Column = line.Length
+                    });
+                }
+            }
+
+            result.HasIssues = result.Error.Any();
+            return result;
+        }
     }
-    public class PerformanceAnalyzer
+}
+public class PerformanceAnalyzer
     {
         public PerformanceMetrics Measure(string fullHtml) => throw new NotImplementedException();
     }
-}
