@@ -9,3 +9,6 @@ C:\Users\vladr\source\repos\laba4_1\ClassLib\obj\Debug\net9.0\ClassLib.dll
 C:\Users\vladr\source\repos\laba4_1\ClassLib\obj\Debug\net9.0\refint\ClassLib.dll
 C:\Users\vladr\source\repos\laba4_1\ClassLib\obj\Debug\net9.0\ClassLib.pdb
 C:\Users\vladr\source\repos\laba4_1\ClassLib\obj\Debug\net9.0\ref\ClassLib.dll
+C:\Users\vladr\source\repos\laba4_1\ClassLib\obj\Debug\net9.0\ClassLib.csproj.AssemblyReference.cache
+C:\Users\vladr\source\repos\laba4_1\ClassLib\obj\Debug\net9.0\ClassLib.sourcelink.json
+C:\Users\vladr\source\repos\laba4_1\ClassLib\bin\Debug\net9.0\Resources\css-validator.jar

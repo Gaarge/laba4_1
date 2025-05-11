@@ -18,3 +18,12 @@ C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\ClassLib.dl
 C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\ClassLib.pdb
 C:\Users\vladr\source\repos\laba4_1\laba4_1\obj\Debug\net9.0-windows\laba4_1.csproj.AssemblyReference.cache
 C:\Users\vladr\source\repos\laba4_1\laba4_1\obj\Debug\net9.0-windows\laba4_1.csproj.Up2Date
+C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\HtmlAgilityPack.dll
+C:\Users\vladr\source\repos\laba4_1\laba4_1\obj\Debug\net9.0-windows\laba4_1.sourcelink.json
+C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\Resources\css-validator.jar
+C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\Acornima.dll
+C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\AngleSharp.dll
+C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\Esprima.dll
+C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\ExCSS.dll
+C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\Jint.dll
+C:\Users\vladr\source\repos\laba4_1\laba4_1\bin\Debug\net9.0-windows\AngleSharp.Css.dll

@@ -14,7 +14,77 @@
           "laba4_1.dll": {}
         }
       },
+      "Acornima/1.1.1": {
+        "runtime": {
+          "lib/net8.0/Acornima.dll": {
+            "assemblyVersion": "1.1.1.0",
+            "fileVersion": "1.1.1.0"
+          }
+        }
+      },
+      "AngleSharp/1.3.0": {
+        "runtime": {
+          "lib/net8.0/AngleSharp.dll": {
+            "assemblyVersion": "1.3.0.0",
+            "fileVersion": "1.3.0.0"
+          }
+        }
+      },
+      "AngleSharp.Css/0.17.0": {
+        "dependencies": {
+          "AngleSharp": "1.3.0"
+        },
+        "runtime": {
+          "lib/net7.0/AngleSharp.Css.dll": {
+            "assemblyVersion": "0.17.0.0",
+            "fileVersion": "0.17.0.0"
+          }
+        }
+      },
+      "Esprima/3.0.5": {
+        "runtime": {
+          "lib/netstandard2.1/Esprima.dll": {
+            "assemblyVersion": "3.0.5.0",
+            "fileVersion": "3.0.5.0"
+          }
+        }
+      },
+      "ExCSS-Core/4.0.5": {
+        "runtime": {
+          "lib/netstandard2.0/ExCSS.dll": {
+            "assemblyVersion": "4.0.5.0",
+            "fileVersion": "4.0.5.0"
+          }
+        }
+      },
+      "HtmlAgilityPack/1.12.1": {
+        "runtime": {
+          "lib/net8.0/HtmlAgilityPack.dll": {
+            "assemblyVersion": "1.12.1.0",
+            "fileVersion": "1.12.1.0"
+          }
+        }
+      },
+      "Jint/4.2.2": {
+        "dependencies": {
+          "Acornima": "1.1.1"
+        },
+        "runtime": {
+          "lib/net8.0/Jint.dll": {
+            "assemblyVersion": "4.2.2.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
       "ClassLib/1.0.0": {
+        "dependencies": {
+          "AngleSharp": "1.3.0",
+          "AngleSharp.Css": "0.17.0",
+          "Esprima": "3.0.5",
+          "ExCSS-Core": "4.0.5",
+          "HtmlAgilityPack": "1.12.1",
+          "Jint": "4.2.2"
+        },
         "runtime": {
           "ClassLib.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -29,6 +99,55 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Acornima/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+ul3wnGmz+e845O8pKzA4NVuRiYvPXlVn+5vgQTN7zmBi/VAgV6aAyBtjBkv1tLKUUFCZS6cPJtRPLOQ1D9XHw==",
+      "path": "acornima/1.1.1",
+      "hashPath": "acornima.1.1.1.nupkg.sha512"
+    },
+    "AngleSharp/1.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iHzfn4cK6CmhuURNdEpmSQCq5/HZFldEpkbnmqT9My8+6l2Sz3F+NxoqRA8z/jTkWB+SAu5boRdp4v/WtyjuIQ==",
+      "path": "anglesharp/1.3.0",
+      "hashPath": "anglesharp.1.3.0.nupkg.sha512"
+    },
+    "AngleSharp.Css/0.17.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bg0AcugmX6BFEi/DHG61QrwRU8iuiX4H8LZehdIzYdqOM/dgb3BsCTzNIcc1XADn4+xfQEdVwJYTSwUxroL4vg==",
+      "path": "anglesharp.css/0.17.0",
+      "hashPath": "anglesharp.css.0.17.0.nupkg.sha512"
+    },
+    "Esprima/3.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yJrbImpXdJAwKoa0FOgK3JV4wuOPHhKI1vWmNepJD5U/t6ENwEr0FX6gl06rIxxKbVGrKCd8JMmm7rieT/4dIw==",
+      "path": "esprima/3.0.5",
+      "hashPath": "esprima.3.0.5.nupkg.sha512"
+    },
+    "ExCSS-Core/4.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iiA8eAJvIVIviGIFFDcoXukyUvGdFdYcikf1fKPh8qOuRSqsnY/VuWzsat6OKuNp9qa3sIu0WzHyDlNbCjybvw==",
+      "path": "excss-core/4.0.5",
+      "hashPath": "excss-core.4.0.5.nupkg.sha512"
+    },
+    "HtmlAgilityPack/1.12.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SP6/2Y26CXtxjXn0Wwsom9Ek35SNWKHEu/IWhNEFejBSSVWWXPRSlpqpBSYWv1SQhYFnwMO01xVbEdK3iRR4hg==",
+      "path": "htmlagilitypack/1.12.1",
+      "hashPath": "htmlagilitypack.1.12.1.nupkg.sha512"
+    },
+    "Jint/4.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8TaFaWVtzEVrRq0HsWu/NbOBU0SESnuF/GlbuCNkbys+mv4q3g7TKv3Eugd0cwk+B624KX44GnUDGMQkdWpwgA==",
+      "path": "jint/4.2.2",
+      "hashPath": "jint.4.2.2.nupkg.sha512"
     },
     "ClassLib/1.0.0": {
       "type": "project",

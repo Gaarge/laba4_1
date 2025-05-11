@@ -23,12 +23,29 @@ namespace laba4_1
         {
             UpdateStatusLabel();
             progressBar.Value = 0;
+            var validator = new CodeValidator();
+            // разметка колонок
+            dgvResults.Columns.Clear();
+            dgvResults.Columns.Add("Language", "Язык");
+            dgvResults.Columns.Add("Line", "Строка");
+            dgvResults.Columns.Add("Column", "Столбец");
+            dgvResults.Columns.Add("Message", "Сообщение");
 
-            var result = new CodeValidator().ValidateHtml(rtbHtml.Text);
+            // валидируем
+            var htmlRes = validator.ValidateHtml(rtbHtml.Text);
+            var cssRes = validator.ValidateCss(rtbCss.Text);
+            var jsRes = validator.ValidateJs(rtbJs.Text);
 
-            dgvResults.Rows.Clear();
-            foreach (var err in result.Errors)
-                dgvResults.Rows.Add(err.Line, err.Column, err.Message);
+            // заполняем
+            void AddErrors(string lang, ValidationResult res)
+            {
+                foreach (var err in res.Errors)
+                    dgvResults.Rows.Add(lang, err.Line, err.Column, err.Message);
+            }
+            AddErrors("HTML", htmlRes);
+            AddErrors("CSS", cssRes);
+            AddErrors("JS", jsRes);
+
             progressBar.Value = 100;
         }
 

@@ -40,9 +40,6 @@
             btnPerf = new Button();
             dgvResults = new DataGridView();
             progressBar = new ProgressBar();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvResults).BeginInit();
             SuspendLayout();
             // 
@@ -108,7 +105,7 @@
             // 
             // btnValidate
             // 
-            btnValidate.Location = new Point(438, 398);
+            btnValidate.Location = new Point(438, 399);
             btnValidate.Name = "btnValidate";
             btnValidate.Size = new Size(156, 23);
             btnValidate.TabIndex = 7;
@@ -118,7 +115,7 @@
             // 
             // btnLint
             // 
-            btnLint.Location = new Point(438, 456);
+            btnLint.Location = new Point(438, 460);
             btnLint.Name = "btnLint";
             btnLint.Size = new Size(156, 23);
             btnLint.TabIndex = 8;
@@ -128,7 +125,7 @@
             // 
             // btnPerf
             // 
-            btnPerf.Location = new Point(438, 506);
+            btnPerf.Location = new Point(438, 526);
             btnPerf.Name = "btnPerf";
             btnPerf.Size = new Size(156, 23);
             btnPerf.TabIndex = 9;
@@ -139,33 +136,17 @@
             // dgvResults
             // 
             dgvResults.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvResults.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
             dgvResults.Location = new Point(12, 399);
             dgvResults.Name = "dgvResults";
-            dgvResults.Size = new Size(344, 150);
+            dgvResults.Size = new Size(420, 150);
             dgvResults.TabIndex = 10;
             // 
             // progressBar
             // 
-            progressBar.Location = new Point(326, 585);
+            progressBar.Location = new Point(438, 564);
             progressBar.Name = "progressBar";
-            progressBar.Size = new Size(156, 59);
+            progressBar.Size = new Size(156, 29);
             progressBar.TabIndex = 11;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Column1";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Column2";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Column3";
-            Column3.Name = "Column3";
             // 
             // Form1
             // 
@@ -205,8 +186,5 @@
         private Button btnPerf;
         private DataGridView dgvResults;
         private ProgressBar progressBar;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
     }
 }

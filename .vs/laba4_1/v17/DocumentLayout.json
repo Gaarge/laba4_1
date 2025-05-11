@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\vladr\\source\\repos\\laba4_1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{96C13582-08D5-44C0-B309-B6AB59AC2FF0}|ClassLib\\ClassLib.csproj|c:\\users\\vladr\\source\\repos\\laba4_1\\classlib\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96C13582-08D5-44C0-B309-B6AB59AC2FF0}|ClassLib\\ClassLib.csproj|solutionrelative:classlib\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4598913D-7BF2-49BD-AC98-63B99AA30D32}|laba4_1\\laba4_1.csproj|C:\\Users\\vladr\\source\\repos\\laba4_1\\laba4_1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4598913D-7BF2-49BD-AC98-63B99AA30D32}|laba4_1\\laba4_1.csproj|solutionrelative:laba4_1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4598913D-7BF2-49BD-AC98-63B99AA30D32}|laba4_1\\laba4_1.csproj|c:\\users\\vladr\\source\\repos\\laba4_1\\laba4_1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4598913D-7BF2-49BD-AC98-63B99AA30D32}|laba4_1\\laba4_1.csproj|solutionrelative:laba4_1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96C13582-08D5-44C0-B309-B6AB59AC2FF0}|ClassLib\\ClassLib.csproj|c:\\users\\vladr\\source\\repos\\laba4_1\\classlib\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96C13582-08D5-44C0-B309-B6AB59AC2FF0}|ClassLib\\ClassLib.csproj|solutionrelative:classlib\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,33 +30,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\vladr\\source\\repos\\laba4_1\\ClassLib\\Class1.cs",
               "RelativeDocumentMoniker": "ClassLib\\Class1.cs",
               "ToolTip": "C:\\Users\\vladr\\source\\repos\\laba4_1\\ClassLib\\Class1.cs",
               "RelativeToolTip": "ClassLib\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAkwLkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T09:55:14.936Z",
+              "WhenOpened": "2025-05-11T14:18:50.156Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\vladr\\source\\repos\\laba4_1\\laba4_1\\Form1.cs",
               "RelativeDocumentMoniker": "laba4_1\\Form1.cs",
               "ToolTip": "C:\\Users\\vladr\\source\\repos\\laba4_1\\laba4_1\\Form1.cs",
               "RelativeToolTip": "laba4_1\\Form1.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAmwBsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAqwC4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T08:39:14.055Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\vladr\\source\\repos\\laba4_1\\laba4_1\\Form1.cs",
               "RelativeDocumentMoniker": "laba4_1\\Form1.cs",
