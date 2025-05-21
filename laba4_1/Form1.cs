@@ -29,19 +29,16 @@ namespace laba4_1
             UpdateStatusLabel();
             progressBar.Value = 0;
             var validator = new CodeValidator();
-            // разметка колонок
             dgvResults.Columns.Clear();
             dgvResults.Columns.Add("Language", "Язык");
             dgvResults.Columns.Add("Line", "Строка");
             dgvResults.Columns.Add("Column", "Столбец");
             dgvResults.Columns.Add("Message", "Сообщение");
 
-            // валидируем
             var htmlRes = validator.ValidateHtml(rtbHtml.Text);
             var cssRes = validator.ValidateCss(rtbCss.Text);
             var jsRes = validator.ValidateJs(rtbJs.Text);
 
-            // заполняем
             void AddErrors(string lang, ValidationResult res)
             {
                 foreach (var err in res.Errors)
@@ -61,7 +58,6 @@ namespace laba4_1
 
             var linter = new CodeLinter();
 
-            // Настраиваем колонки для лентера
             dgvResults.Columns.Clear();
             dgvResults.Columns.Add("Language", "Язык");
             dgvResults.Columns.Add("Line", "Строка");
@@ -69,12 +65,10 @@ namespace laba4_1
             dgvResults.Columns.Add("Rule", "Правило");
             dgvResults.Columns.Add("Message", "Сообщение");
 
-            // Запускаем лентер для каждого языка
             var htmlLint = linter.LintHtml(rtbHtml.Text, new LintOptions());
             var cssLint = linter.LintCss(rtbCss.Text, new LintOptions());
             var jsLint = linter.LintJs(rtbJs.Text, new LintOptions());
 
-            // Вспомогательный метод для заполнения
             void AddLint(string lang, LintResult res)
             {
                 foreach (var err in res.Error)
@@ -92,7 +86,6 @@ namespace laba4_1
             UpdateStatusLabel();
             progressBar.Value = 0;
 
-            // 1) Собираем единый документ
             string html = rtbHtml.Text;
             string css = rtbCss.Text;
             string js = rtbJs.Text;
@@ -101,19 +94,15 @@ namespace laba4_1
                               "<style>" + css + "</style></head><body>" +
                               html + "<script>" + js + "</script></body></html>";
 
-            // 2) Убедиться, что движок готов
             await webView.EnsureCoreWebView2Async();
 
-            // 3) Настраиваем замер FCP
             swFcp = Stopwatch.StartNew();
             webView.CoreWebView2.DOMContentLoaded += OnDomContentLoaded;
 
-            // 4) Настраиваем замер TTI
             swTti = new Stopwatch();
             webView.CoreWebView2.NavigationStarting += OnNavigationStarting;
             webView.CoreWebView2.NavigationCompleted += OnNavigationCompleted;
 
-            // 5) Загружаем HTML
             webView.NavigateToString(fullHtml);
         }
         private void OnDomContentLoaded(object sender, CoreWebView2DOMContentLoadedEventArgs e)
